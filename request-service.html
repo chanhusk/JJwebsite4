@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Request Service | American Diesel Mechanix</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Roboto:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="nav-container">
+            <div class="logo"><a href="index.html" style="color:white">AMERICAN <span>DIESEL</span></a></div>
+            <i class="fas fa-bars hamburger"></i>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="request-service.html" class="active">Request Service</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="tel:3862270152" style="color:var(--accent); font-weight:bold;"><i class="fas fa-phone"></i>
+                        (386) 227-0152</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <div class="page-title">
+        <h1>Request Service</h1>
+    </div>
+
+    <div class="container">
+        <div class="form-container">
+            <p class="text-center" style="margin-bottom: 20px;">Please fill out the form below to request service. We
+                will get back to you as soon as possible.</p>
+            <form action="#" method="POST" class="service-form">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email">
+                </div>
+
+                <hr style="margin: 20px 0; border: 0; border-top: 1px solid #ddd;">
+                <h3 style="margin-bottom: 15px;">Vehicle Information</h3>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="year">Year</label>
+                        <input type="text" id="year" name="year" placeholder="e.g. 2018" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="make">Make</label>
+                        <input type="text" id="make" name="make" placeholder="e.g. Peterbilt" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="model">Model</label>
+                        <input type="text" id="model" name="model" placeholder="e.g. 579" required>
+                    </div>
+                </div>
+
+
+
+                <div class="form-group">
+                    <label for="issue">Description of Issue</label>
+                    <textarea id="issue" name="issue" rows="5" required
+                        placeholder="Please describe what's wrong with the vehicle..."></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-block">Submit Request</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <p><strong>American Diesel Mechanix</strong></p>
+        <p>386-227-0152</p>
+        <br>
+        <p>&copy; 2023 American Diesel Mechanix. All Rights Reserved.</p>
+    </footer>
+
+    <a href="tel:3862270152" class="sticky-cta">
+        <i class="fas fa-phone"></i> Call Now
+    </a>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

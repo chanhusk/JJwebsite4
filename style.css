@@ -1,0 +1,349 @@
+/* style.css - Complete File */
+
+:root {
+    --primary: #0f172a; /* Dark Navy */
+    --accent: #dc2626;  /* Emergency Red */
+    --light: #f8fafc;   /* Off White */
+    --dark: #334155;    /* Dark Grey */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--light);
+    color: var(--dark);
+    line-height: 1.6;
+    /* Padding at bottom so content isn't hidden behind sticky mobile button */
+    padding-bottom: 70px; 
+}
+
+h1, h2, h3 {
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    color: var(--primary);
+    letter-spacing: 0.5px;
+}
+
+a { text-decoration: none; }
+
+/* --- Utilities --- */
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 0;
+}
+
+.text-center { text-align: center; }
+
+.btn {
+    display: inline-block;
+    background: var(--accent);
+    color: white;
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+.btn:hover { background: #b91c1c; }
+
+/* --- Header & Nav --- */
+header {
+    background-color: var(--primary);
+    color: white;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+.nav-container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.4rem;
+    font-weight: 700;
+    font-family: 'Oswald', sans-serif;
+    color: white;
+}
+.logo span { color: var(--accent); }
+
+/* Hamburger Menu Icon */
+.hamburger {
+    display: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: white;
+}
+
+/* Nav Links */
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    align-items: center;
+}
+
+.nav-links li a {
+    color: white;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+.nav-links li a:hover { color: var(--accent); }
+
+/* --- Hero Section --- */
+.hero {
+    /* Dark overlay + Image */
+    background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.85)), url('https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&w=1000&q=80');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.hero h1 {
+    color: white;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+/* --- Home Page Extras (Emergency & Features) --- */
+.emergency-banner {
+    background-color: var(--dark);
+    color: white;
+    padding: 30px 20px;
+    text-align: center;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.features-section {
+    background-color: white;
+    padding: 50px 0;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    text-align: center;
+}
+
+.feature-item i {
+    font-size: 2.5rem;
+    color: var(--primary);
+    margin-bottom: 15px;
+    background: var(--light);
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+    border-radius: 50%;
+}
+
+/* Service Area List (Footer Strip) */
+.area-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+    list-style: none;
+    padding: 0;
+}
+
+.area-list li {
+    background: rgba(255,255,255,0.2);
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    color: white;
+}
+
+/* --- Standard Page Components --- */
+.page-title {
+    background: #e2e8f0;
+    padding: 40px 0;
+    text-align: center;
+    border-bottom: 4px solid var(--accent);
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    padding: 30px 20px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    text-align: center; /* Default to center for home cards */
+}
+
+/* Specific alignment for lists inside cards */
+.card ul {
+    text-align: left;
+    padding-left: 20px;
+    margin-top: 15px;
+}
+
+/* --- FAQ --- */
+.faq-item {
+    background: white;
+    margin-bottom: 15px;
+    padding: 20px;
+    border-left: 4px solid var(--accent);
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+/* --- Footer --- */
+footer {
+    background-color: #020617;
+    color: #94a3b8;
+    padding: 40px 20px;
+    text-align: center;
+    margin-top: auto;
+}
+
+/* --- Sticky Mobile Call Button --- */
+.sticky-cta {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--accent);
+    padding: 15px;
+    text-align: center;
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: white;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.2);
+}
+
+.sticky-cta:hover { background-color: #b91c1c; }
+
+/* --- Mobile Responsive Media Queries --- */
+@media (max-width: 768px) {
+    .hamburger { display: block; }
+    
+    /* Mobile Menu Logic */
+    .nav-links {
+        position: absolute;
+        top: 60px; /* Height of header */
+        left: 0;
+        width: 100%;
+        background-color: var(--primary);
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+        gap: 25px;
+        display: none; /* Hidden by default */
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    .nav-links.active {
+        display: flex; /* Show when JS toggles 'active' */
+    }
+
+    .nav-links li a { font-size: 1.2rem; }
+    
+    .hero h1 { font-size: 2rem; }
+}
+
+@media (min-width: 769px) {
+    .sticky-cta { display: none; } /* Hide sticky button on desktop */
+    body { padding-bottom: 0; } /* Remove bottom padding on desktop */
+}
+
+/* --- Service Request Form --- */
+.form-container {
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    max-width: 800px; /* Wider for the form */
+    margin: 0 auto;
+}
+
+.service-form .form-group {
+    margin-bottom: 20px;
+}
+
+.service-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: var(--primary);
+}
+
+.service-form input[type="text"],
+.service-form input[type="email"],
+.service-form input[type="tel"],
+.service-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-family: inherit;
+    transition: border-color 0.3s;
+}
+
+.service-form input:focus,
+.service-form textarea:focus {
+    outline: none;
+    border-color: var(--accent);
+}
+
+.form-row {
+    display: flex;
+    gap: 20px;
+}
+
+.form-row .form-group {
+    flex: 1;
+}
+
+.btn-block {
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-size: 1.1rem;
+    padding: 15px;
+}
+
+@media (max-width: 600px) {
+    .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+}
